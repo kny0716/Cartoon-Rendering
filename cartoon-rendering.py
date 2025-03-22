@@ -1,11 +1,11 @@
 import cv2
 
-img = cv2.imread("test5.jpg")  
+img = cv2.imread("test10.jpg")  
 img = cv2.resize(img, (600, 600))
 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-gray= cv2.medianBlur(gray, 5)
+gray= cv2.medianBlur(gray, 3)
 edges = cv2.adaptiveThreshold(gray, 255,
                                   cv2.ADAPTIVE_THRESH_MEAN_C,
                                   cv2.THRESH_BINARY, blockSize=9, C=9)
